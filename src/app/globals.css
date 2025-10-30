@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-
-
-@theme inline {
+@theme {
   --font-sans: var(--font-pretendard);
+  --color-background-primary:#F9FAFB
 }
