@@ -6,6 +6,7 @@ interface FlexProps extends HTMLAttributes<HTMLDivElement> {
   align?: CSSProperties["alignItems"];
   gap?: number;
   style?: CSSProperties;
+  className?: string;
 }
 
 export default function Flex({
@@ -15,6 +16,7 @@ export default function Flex({
   align = "stretch",
   gap = 0,
   style,
+  className,
 }: FlexProps) {
   return (
     <div
@@ -25,7 +27,7 @@ export default function Flex({
         alignItems: align,
         ...style,
       }}
-      className={`flex`}
+      className={`flex ${className}`}
     >
       {children}
     </div>

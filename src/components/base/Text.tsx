@@ -1,10 +1,11 @@
-import { ElementType, PropsWithChildren } from "react";
+import { CSSProperties, ElementType, PropsWithChildren } from "react";
 
 interface TextProps extends PropsWithChildren {
   as?: ElementType;
   size?: number;
   weight?: 400 | 600 | 700;
   color?: string;
+  height?: CSSProperties["lineHeight"];
 }
 
 export default function Text({
@@ -13,6 +14,7 @@ export default function Text({
   size = 16,
   weight = 400,
   color = "#000",
+  height,
 }: TextProps) {
   return (
     <Tag
@@ -21,6 +23,7 @@ export default function Text({
         fontWeight: weight,
         wordBreak: "keep-all",
         color: color,
+        lineHeight: height,
       }}
     >
       {children}
