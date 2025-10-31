@@ -10,12 +10,20 @@ interface ProgressChartProps {
 }
 
 export default function ProgressChart({ percent }: ProgressChartProps) {
+  const chartColor =
+    percent === 100
+      ? "#725AF5"
+      : percent < 50
+      ? "#FF6161"
+      : percent < 80
+      ? "#FFBB00"
+      : "#57CF83";
   const data = {
     datasets: [
       {
         data: [100 - percent, percent],
-        backgroundColor: ["transparent", "#EF4444"],
-        borderRadius: 20,
+        backgroundColor: ["transparent", chartColor],
+        borderRadius: percent === 100 ? 0 : 20,
         borderWidth: 0,
         cutout: "70%",
       },
