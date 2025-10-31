@@ -6,7 +6,7 @@ import Flex from "./base/Flex";
 import Text from "./base/Text";
 import ProgressChart from "./ProgressChart";
 
-interface EmptyContentProps {
+export interface EmptyContentProps {
   title: string;
   questionNumber: number;
   conceptNum: number;
