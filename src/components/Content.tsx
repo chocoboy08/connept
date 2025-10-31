@@ -8,7 +8,7 @@ import Button from "./base/Button";
 import Flex from "./base/Flex";
 import Text from "./base/Text";
 
-interface ContentProps {
+export interface ContentProps {
   title: string;
   number: number;
   time: string;
@@ -50,7 +50,7 @@ export default function Content({
         </Text>
       </Flex>
       <Flex align="flex-end" gap={20}>
-        <Flex direction="column" gap={14}>
+        <Flex direction="column" gap={10}>
           <Text as={"h3"} size={18} weight={600}>
             {title}
           </Text>

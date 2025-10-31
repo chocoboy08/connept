@@ -19,6 +19,7 @@ export default function Box({
       className={`flex flex-col justify-between shadow-[0_2px_2px_0_rgba(0,0,0,0.06)] rounded-2xl`}
       style={{
         width: width,
+        minWidth: width,
         paddingLeft: paddingX,
         paddingRight: paddingX,
         paddingBottom: paddingY,
