@@ -1,3 +1,4 @@
+import IconAlert from "../../public/icons/icon_alert.svg";
 import Logo from "../../public/icons/logo.svg";
 import Flex from "./base/Flex";
 import Text from "./base/Text";
@@ -7,7 +8,7 @@ export default function Header() {
     <Flex
       align="center"
       justify="space-between"
-      className="bg-white shadow-[0_2px_2px_0_rgba(0,0,0,0.06)]"
+      className="bg-white shadow-[0_2px_2px_0_rgba(0,0,0,0.06)] min-w-[900px]"
       style={{
         paddingRight: 80,
         paddingLeft: 80,
@@ -43,7 +44,7 @@ export default function Header() {
           justify="center"
           align="center"
         >
-          알림
+          <IconAlert />
         </Flex>
         <Flex
           style={{
