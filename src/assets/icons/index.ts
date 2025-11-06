@@ -1,0 +1,10 @@
+export { default as IconAlert } from "../../../public/icons/icon_alert.svg";
+export { default as IconBook } from "../../../public/icons/icon_book.svg";
+export { default as IconCheckedCircle } from "../../../public/icons/icon_checked_circle.svg";
+export { default as IconClock } from "../../../public/icons/icon_clock.svg";
+export { default as IconEmptyCircle } from "../../../public/icons/icon_empty_circle.svg";
+export { default as IconEmptyStar } from "../../../public/icons/icon_empty_star.svg";
+export { default as IconPencil } from "../../../public/icons/icon_pencil.svg";
+export { default as IconStar } from "../../../public/icons/icon_star.svg";
+export { default as Logo } from "../../../public/icons/logo.svg";
+export { default as SubmitCheck } from "../../../public/icons/submit_check.svg";
