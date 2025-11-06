@@ -1,10 +1,13 @@
+"use client";
+
+import { IconAlert, Logo } from "@/assets/icons";
 import Link from "next/link";
-import IconAlert from "../../public/icons/icon_alert.svg";
-import Logo from "../../public/icons/logo.svg";
+import { usePathname } from "next/navigation";
 import Flex from "./base/Flex";
 import Text from "./base/Text";
 
 export default function Header() {
+  const pathname = usePathname();
   return (
     <header>
       <Flex
@@ -13,20 +16,34 @@ export default function Header() {
         className="bg-white shadow-[0_2px_2px_0_rgba(0,0,0,0.06)] py-4 px-4 md:px-20 relative z-10"
       >
         <Flex align="center" gap={10}>
-          <Logo />
-          <Text size={22} weight={700} color="#725AF5">
+          <Logo width={30} height={30} />
+          <Text size={22} weight={700} color="var(--color-main)">
             Connept
           </Text>
         </Flex>
         <nav aria-label="주요 메뉴">
           <Flex gap={82}>
             <Link href={"/myStudy"}>
-              <Text size={20} weight={400} color="#725AF5">
+              <Text
+                size={20}
+                weight={400}
+                color={
+                  pathname === "/myStudy" ? "var(--color-main)" : "#4B5563"
+                }
+              >
                 내 학습
               </Text>
             </Link>
             <Link href={"/study"}>
-              <Text size={20} weight={400} color="#4B5563">
+              <Text
+                size={20}
+                weight={400}
+                color={
+                  pathname === "/study" || pathname === "/questions"
+                    ? "var(--color-main)"
+                    : "#4B5563"
+                }
+              >
                 학습하기
               </Text>
             </Link>
@@ -50,7 +67,7 @@ export default function Header() {
               alignItems: "center",
             }}
           >
-            <IconAlert />
+            <IconAlert width={14} height={14} />
           </button>
           <Flex
             aria-label="프로필"
@@ -58,7 +75,7 @@ export default function Header() {
               width: 40,
               height: 40,
               borderRadius: 20,
-              backgroundColor: "#725AF5",
+              backgroundColor: "var(--color-main)",
               color: "#fff",
             }}
             justify="center"
