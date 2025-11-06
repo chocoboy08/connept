@@ -10,7 +10,7 @@ export default function Header() {
       <Flex
         align="center"
         justify="space-between"
-        className="bg-white shadow-[0_2px_2px_0_rgba(0,0,0,0.06)] py-4 px-4 md:px-20"
+        className="bg-white shadow-[0_2px_2px_0_rgba(0,0,0,0.06)] py-4 px-4 md:px-20 relative z-10"
       >
         <Flex align="center" gap={10}>
           <Logo />
