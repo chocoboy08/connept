@@ -24,7 +24,7 @@ export default function Button({
   return (
     <button
       onClick={onClickHandler}
-      className={`flex justify-center items-center rounded-xl cursor-pointer ${
+      className={`flex justify-center items-center rounded-xl  ${
         type === "normal" ? "bg-main" : `bg-white border border-main`
       }`}
       style={{
