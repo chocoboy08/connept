@@ -1,16 +1,15 @@
+import { IconCheckedCircle, IconEmptyCircle } from "@/assets/icons";
 import Box from "@/components/base/Box";
 import Flex from "@/components/base/Flex";
 import Text from "@/components/base/Text";
 import Content from "@/components/Content";
 import EmptyContent from "@/components/EmptyContent";
 import { testContent, testEmptyContent } from "@/constants/mockData";
-import IconCheckedCircle from "../../../public/icons/icon_checked_circle.svg";
-import IconEmptyCircle from "../../../public/icons/icon_empty_circle.svg";
 
 export default function page() {
   return (
-    <Flex direction="column" gap={50} className="pl-[50px] overflow-hidden">
-      <Flex direction="column" gap={12}>
+    <Flex direction="column" gap={50} className="overflow-hidden">
+      <Flex direction="column" gap={12} className="ml-20">
         <Text size={22} weight={600} color="#000">
           안녕하세요, 김민준님!
         </Text>
@@ -24,7 +23,12 @@ export default function page() {
             </Text>
             <Flex gap={28}>
               <Flex align="flex-end" gap={4}>
-                <Text size={24} weight={600} color="#725AF5" height={"24px"}>
+                <Text
+                  size={24}
+                  weight={600}
+                  color="var(--color-main)"
+                  height={"24px"}
+                >
                   5
                 </Text>
                 <Text size={14} weight={400} color="#5E5E5E">
@@ -32,13 +36,13 @@ export default function page() {
                 </Text>
               </Flex>
               <Flex gap={5}>
-                <IconCheckedCircle />
-                <IconCheckedCircle />
-                <IconCheckedCircle />
-                <IconCheckedCircle />
-                <IconCheckedCircle />
-                <IconEmptyCircle />
-                <IconEmptyCircle />
+                <IconCheckedCircle width={32} height={32} />
+                <IconCheckedCircle width={32} height={32} />
+                <IconCheckedCircle width={32} height={32} />
+                <IconCheckedCircle width={32} height={32} />
+                <IconCheckedCircle width={32} height={32} />
+                <IconEmptyCircle width={32} height={32} />
+                <IconEmptyCircle width={32} height={32} />
               </Flex>
             </Flex>
           </Box>
@@ -103,13 +107,13 @@ export default function page() {
         </Flex>
       </Flex>
 
-      <Flex direction="column" gap={45}>
+      <Flex direction="column" gap={45} className="ml-20">
         <Text size={22} weight={700}>
           오늘 준비된 학습 콘텐츠
         </Text>
         <Flex
           gap={30}
-          className="overflow-scroll"
+          className="overflow-scroll -ml-20 pl-20"
           style={{ scrollbarWidth: "none" }}
         >
           {testContent.map((item, idx) => (
@@ -125,12 +129,12 @@ export default function page() {
         </Flex>
       </Flex>
 
-      <Flex direction="column" gap={45}>
+      <Flex direction="column" gap={45} className="ml-20">
         <Text size={22} weight={700}>
           공백 개념 해소율
         </Text>
         <div
-          className="grid grid-rows-2 grid-flow-col gap-[30px] overflow-x-auto overflow-y-hidden"
+          className="grid grid-rows-2 grid-flow-col gap-[30px] overflow-x-auto overflow-y-hidden -ml-20 pl-20"
           style={{ scrollbarWidth: "none", height: 460 }}
         >
           {testEmptyContent.map((item, idx) => (
