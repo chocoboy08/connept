@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -23,9 +22,8 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`bg-background-primary ${pretendard.variable} ${pretendard.className} h-screen max-w-7xl `}
+        className={`bg-background-primary ${pretendard.variable} ${pretendard.className} h-screen max-w-7xl`}
       >
-        <Header />
         {children}
       </body>
     </html>
