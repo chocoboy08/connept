@@ -1,10 +1,18 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect } from "react";
 
 interface ModalProps extends PropsWithChildren {
   onClose: () => void;
 }
 
 export default function Modal({ children, onClose }: ModalProps) {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-[#00000028]" onClick={onClose} />
