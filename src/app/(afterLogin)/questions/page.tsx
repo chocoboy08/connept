@@ -43,7 +43,7 @@ export default function QuestionsPage() {
                     width={45}
                     height={45}
                   >
-                    {idx}
+                    {idx + 1}
                   </Button>
                   <Text>{item}</Text>
                 </Flex>

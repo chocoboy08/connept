@@ -89,12 +89,16 @@ export default function LoginPage() {
         </div>
         <Flex direction="column" gap={30} className="w-full">
           <input
+            id="id"
+            name="id"
             placeholder="아이디"
             className="w-full border-2 border-[#CAC5CD] rounded-[20px] text-[24px] pl-8 py-4"
             value={formData.id}
             onChange={(e) => setFormData({ ...formData, id: e.target.value })}
           />
           <input
+            id="password"
+            name="password"
             type="password"
             placeholder="비밀번호"
             className="w-full border-2 border-[#CAC5CD] rounded-[20px] text-[24px] pl-8 py-4"
