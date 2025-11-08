@@ -1,6 +1,12 @@
 "use client";
+import {
+  IconBook,
+  IconClock,
+  IconEmptyStar,
+  IconPencil,
+  IconStar,
+} from "@/assets/icons";
 import { useRouter } from "next/navigation";
-import { IconBook, IconClock, IconEmptyStar, IconPencil, IconStar } from "@/assets/icons";
 import Box from "./base/Box";
 import Button from "./base/Button";
 import Flex from "./base/Flex";
@@ -28,12 +34,12 @@ export default function Content({
         {Array(stars)
           .fill(0)
           .map((_, idx) => (
-            <IconStar key={`star-${idx}`} width="15" />
+            <IconStar key={`star-${idx}`} width={15} height={15} />
           ))}
         {Array(5 - stars)
           .fill(0)
           .map((_, idx) => (
-            <IconEmptyStar key={`empty-star-${idx}`} width="15" />
+            <IconEmptyStar key={`empty-star-${idx}`} width={15} height={15} />
           ))}
       </Flex>
     );
@@ -42,7 +48,7 @@ export default function Content({
     <Box width={315} paddingX={24} paddingY={21}>
       <Flex justify="space-between" style={{ marginBottom: 20 }}>
         <div className="bg-[#DBEAFE] w-12 h-12 flex justify-center items-center rounded-4xl">
-          <IconBook width={30} fill={"#4F46E5"} />
+          <IconBook width={30} height={30} fill={"#4F46E5"} />
         </div>
         <Text size={12} color="#878787" weight={600}>
           {type}
@@ -54,13 +60,13 @@ export default function Content({
             {title}
           </Text>
           <Flex gap={12} align="center">
-            <IconPencil width="24" fill={"#4B5563"} />
+            <IconPencil width={24} height={24} fill={"#4B5563"} />
             <Text color="#4B5563" size={14}>
               {number}문제
             </Text>
           </Flex>
           <Flex gap={12} align="center">
-            <IconClock width="24" fill={"#4B5563"} />
+            <IconClock width={24} height={24} fill={"#4B5563"} />
             <Text color="#4B5563" size={14}>
               예상 소요시간: {time}
             </Text>

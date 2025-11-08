@@ -28,19 +28,19 @@ export default function EmptyContent({
           </Text>
           <Flex direction="column">
             <Flex gap={10} align="center">
-              <IconPencil width="24" fill={"#4B5563"} />
+              <IconPencil width={24} height={24} fill={"#4B5563"} />
               <Text color="#4B5563" size={14}>
                 총 {questionNumber}문제
               </Text>
             </Flex>
             <Flex gap={10} align="center">
-              <IconClock width="24" fill={"#4B5563"} />
+              <IconClock width={24} height={24} fill={"#4B5563"} />
               <Text color="#4B5563" size={14}>
                 개념학습 {conceptNum}회
               </Text>
             </Flex>
             <Flex gap={10} align="center">
-              <IconBook width="24" fill={"#4B5563"} />
+              <IconBook width={24} height={24} fill={"#4B5563"} />
               <Text color="#4B5563" size={14}>
                 정답률 {correct}%
               </Text>
