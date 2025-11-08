@@ -39,7 +39,9 @@ export default function Header() {
                 size={20}
                 weight={400}
                 color={
-                  pathname === "/study" || pathname === "/questions"
+                  pathname.includes("/study") ||
+                  pathname.includes("/questions") ||
+                  pathname.includes("/result")
                     ? "var(--color-main)"
                     : "#4B5563"
                 }

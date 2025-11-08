@@ -79,7 +79,7 @@ export default function QuestionsPage({ type = "choice" }: StudyPageProps) {
           </Button>
           <Button
             onClickHandler={() => {
-              router.push("/study/submit-confirm");
+              router.push("/questions/submit-confirm");
             }}
             width={120}
             height={46}
