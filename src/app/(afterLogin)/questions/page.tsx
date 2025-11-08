@@ -5,14 +5,11 @@ import Flex from "@/components/base/Flex";
 import Text from "@/components/base/Text";
 import { useRouter } from "next/navigation";
 
-interface StudyPageProps {
-  type: "choice" | "short-answer";
-}
-
 const questionData = ["2, 7", "-2, 7", "1, 5", "-1, 5", "3, 12"];
 
-export default function QuestionsPage({ type = "choice" }: StudyPageProps) {
+export default function QuestionsPage() {
   const router = useRouter();
+  const type = "choice";
   return (
     <Flex direction="column" gap={40}>
       <Flex justify="space-between">
