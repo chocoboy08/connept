@@ -23,7 +23,7 @@ export default function EmptyContent({
     <Box paddingX={36} paddingY={34} width={345}>
       <Flex justify="space-between" align="center">
         <Flex direction="column" gap={14}>
-          <Text as={"h3"} size={18} weight={600}>
+          <Text as={"h3"} size={18} weight={600} wrap="break-spaces">
             {title}
           </Text>
           <Flex direction="column">
