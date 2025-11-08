@@ -27,7 +27,7 @@ export default function Flex({
         alignItems: align,
         ...style,
       }}
-      className={`flex ${className}`}
+      className={`flex ${className || ""}`}
     >
       {children}
     </div>
