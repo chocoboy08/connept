@@ -5,6 +5,9 @@ interface BoxProps extends PropsWithChildren {
   paddingX?: number;
   paddingY?: number;
   color?: string;
+  border?: CSSProperties["border"];
+  withShadow?: boolean;
+  center?: boolean;
 }
 
 export default function Box({
@@ -13,10 +16,15 @@ export default function Box({
   paddingX = 0,
   paddingY = 0,
   color = "#fff",
+  border,
+  withShadow = true,
+  center = true,
 }: BoxProps) {
   return (
     <div
-      className={`flex flex-col justify-between shadow-[0_2px_2px_0_rgba(0,0,0,0.06)] rounded-2xl`}
+      className={`flex flex-col ${center ? "justify-center" : ""} ${
+        withShadow ? "shadow-[0_2px_2px_0_rgba(0,0,0,0.06)]" : ""
+      } rounded-2xl`}
       style={{
         width: width,
         minWidth: width,
@@ -25,6 +33,7 @@ export default function Box({
         paddingBottom: paddingY,
         paddingTop: paddingY,
         backgroundColor: color,
+        border: border,
       }}
     >
       {children}

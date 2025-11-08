@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
+button{
+  cursor: pointer;
+}
+
 @theme {
   --font-sans: var(--font-pretendard);
-  --color-background-primary:#F9FAFB
+  --color-background-primary:#F9FAFB;
+  --color-main:#725AF5;
+  --color-correct:#2ECC71;
+  --color-error:#EF4444;
 }

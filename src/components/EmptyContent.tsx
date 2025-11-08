@@ -1,6 +1,4 @@
-import BookIcon from "../../public/icons/icon_book.svg";
-import ClockIcon from "../../public/icons/icon_clock.svg";
-import PencilIcon from "../../public/icons/icon_pencil.svg";
+import { IconBook, IconClock, IconPencil } from "@/assets/icons";
 import Box from "./base/Box";
 import Flex from "./base/Flex";
 import Text from "./base/Text";
@@ -25,24 +23,24 @@ export default function EmptyContent({
     <Box paddingX={36} paddingY={34} width={345}>
       <Flex justify="space-between" align="center">
         <Flex direction="column" gap={14}>
-          <Text as={"h3"} size={18} weight={600}>
+          <Text as={"h3"} size={18} weight={600} wrap="break-spaces">
             {title}
           </Text>
           <Flex direction="column">
             <Flex gap={10} align="center">
-              <PencilIcon width="24" fill={"#4B5563"} />
+              <IconPencil width={24} height={24} fill={"#4B5563"} />
               <Text color="#4B5563" size={14}>
                 총 {questionNumber}문제
               </Text>
             </Flex>
             <Flex gap={10} align="center">
-              <ClockIcon width="24" fill={"#4B5563"} />
+              <IconClock width={24} height={24} fill={"#4B5563"} />
               <Text color="#4B5563" size={14}>
                 개념학습 {conceptNum}회
               </Text>
             </Flex>
             <Flex gap={10} align="center">
-              <BookIcon width="24" fill={"#4B5563"} />
+              <IconBook width={24} height={24} fill={"#4B5563"} />
               <Text color="#4B5563" size={14}>
                 정답률 {correct}%
               </Text>

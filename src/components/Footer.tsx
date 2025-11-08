@@ -4,7 +4,7 @@ import Text from "./base/Text";
 
 export default function Footer() {
   return (
-    <Flex direction="column" gap={30} className="mb-50 mx-20">
+    <Flex direction="column" gap={30} className="mx-20 pb-15 bg-transparent">
       <div className="h-px bg-[#1F2937]" />
       <Flex justify="space-between">
         <Text size={14} weight={400} color="#9CA3AF">

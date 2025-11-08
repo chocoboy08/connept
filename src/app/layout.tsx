@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`bg-background-primary ${pretendard.variable} ${pretendard.className} h-screen max-w-7xl m-auto`}
+        className={`bg-background-primary ${pretendard.variable} ${pretendard.className} h-screen max-w-7xl`}
       >
         {children}
       </body>
