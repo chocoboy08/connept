@@ -6,7 +6,7 @@ import Content from "@/components/Content";
 import EmptyContent from "@/components/EmptyContent";
 import { testContent, testEmptyContent } from "@/constants/mockData";
 
-export default function page() {
+export default function MyStudyPage() {
   return (
     <Flex direction="column" gap={50} className="overflow-hidden">
       <Flex direction="column" gap={12} className="ml-20">
