@@ -50,7 +50,15 @@ export default function Header() {
               </Text>
             </Link>
             <Link href={"/history"}>
-              <Text size={20} weight={400} color="#4B5563">
+              <Text
+                size={20}
+                weight={400}
+                color={
+                  pathname.includes("/history")
+                    ? "var(--color-main)"
+                    : "#4B5563"
+                }
+              >
                 학습기록
               </Text>
             </Link>

@@ -3,7 +3,7 @@ import Text from "@/components/base/Text";
 import Content from "@/components/Content";
 import { testContent } from "@/constants/mockData";
 
-export default function page() {
+export default function StudyPage() {
   return (
     <Flex direction="column" gap={50}>
       <Flex direction="column" gap={45} className="ml-20">
