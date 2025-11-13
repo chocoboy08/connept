@@ -1,4 +1,4 @@
-export default function HistoyLayout({
+export default function HistoryLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

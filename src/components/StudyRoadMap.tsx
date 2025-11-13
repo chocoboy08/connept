@@ -17,7 +17,7 @@ export default function StudyRoadMap() {
         </Text>
         <Flex direction="column" className="w-75">
           {mock.map((item, idx) => (
-            <Flex gap={12} key={`roadmap-${item}-${idx}`}>
+            <Flex gap={12} key={`roadmap-${item.title}-${idx}`}>
               <Flex direction="column" align="center">
                 <div
                   className={`size-2.5 rounded-full ${

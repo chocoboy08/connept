@@ -4,11 +4,15 @@ import Flex from "./base/Flex";
 import Text from "./base/Text";
 
 interface HistoryContentProp {
+  title: string;
+  subject: string;
   progress: number;
   recent?: string;
 }
 
 export default function HistoryContent({
+  title,
+  subject,
   progress,
   recent,
 }: HistoryContentProp) {
@@ -16,7 +20,7 @@ export default function HistoryContent({
     <Box border={"1px solid #E5E7EB"} paddingX={16} paddingY={16} width={274}>
       <Flex align="center" justify="space-between">
         <button className="flex justify-center">
-          <Text>미분 계수와 도함수</Text>
+          <Text>{title}</Text>
           <IconArrowDown width={20} height={20} />
         </button>
         <div
@@ -43,7 +47,7 @@ export default function HistoryContent({
         </div>
       </Flex>
       <Text size={14} color="#4B5563">
-        수학 II
+        {subject}
       </Text>
       <Flex justify="space-between" className="mt-1">
         <Text size={14} color="#4B5563">

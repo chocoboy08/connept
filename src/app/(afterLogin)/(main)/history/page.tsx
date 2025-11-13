@@ -32,10 +32,11 @@ export default function HistoryPage() {
           </Flex>
         </Flex>
         <Flex direction="column" gap={27}>
-          <HistoryContent progress={0} />
-          <HistoryContent progress={50} />
-          <HistoryContent progress={75} recent="2025.06.14" />
-          <HistoryContent progress={100} />
+          <HistoryContent
+            title="미분 계수와 도함수"
+            subject="수학 2"
+            progress={0}
+          />
         </Flex>
       </Box>
 
@@ -63,10 +64,11 @@ export default function HistoryPage() {
           </Flex>
         </Flex>
         <Flex direction="column" gap={27}>
-          <HistoryContent progress={0} />
-          <HistoryContent progress={50} />
-          <HistoryContent progress={75} recent="2025.06.14" />
-          <HistoryContent progress={100} />
+          <HistoryContent
+            title="미분 계수와 도함수"
+            subject="수학 2"
+            progress={0}
+          />
         </Flex>
       </Box>
 
