@@ -8,6 +8,20 @@ import Text from "./base/Text";
 
 export default function Header() {
   const pathname = usePathname();
+  const isTeacher = pathname.startsWith("/teacher");
+
+  const menuItems = isTeacher
+    ? [
+        { href: "/teacher/dashboard", label: "대시보드", paths: ["/teacher/dashboard"] },
+        { href: "/teacher/contents", label: "학습자료", paths: ["/teacher/contents"] },
+        { href: "/teacher/management", label: "관리", paths: ["/teacher/management"] },
+      ]
+    : [
+        { href: "/student/myStudy", label: "내 학습", paths: ["/student/myStudy"] },
+        { href: "/student/study", label: "학습하기", paths: ["/student/study", "/student/questions", "/student/result"] },
+        { href: "/student/history", label: "학습기록", paths: ["/student/history"] },
+      ];
+
   return (
     <header>
       <Flex
@@ -23,45 +37,20 @@ export default function Header() {
         </Flex>
         <nav aria-label="주요 메뉴">
           <Flex gap={82}>
-            <Link href={"/myStudy"}>
-              <Text
-                size={20}
-                weight={400}
-                color={
-                  pathname === "/myStudy" ? "var(--color-main)" : "#4B5563"
-                }
-              >
-                내 학습
-              </Text>
-            </Link>
-            <Link href={"/study"}>
-              <Text
-                size={20}
-                weight={400}
-                color={
-                  pathname.includes("/study") ||
-                  pathname.includes("/questions") ||
-                  pathname.includes("/result")
-                    ? "var(--color-main)"
-                    : "#4B5563"
-                }
-              >
-                학습하기
-              </Text>
-            </Link>
-            <Link href={"/history"}>
-              <Text
-                size={20}
-                weight={400}
-                color={
-                  pathname.includes("/history")
-                    ? "var(--color-main)"
-                    : "#4B5563"
-                }
-              >
-                학습기록
-              </Text>
-            </Link>
+            {menuItems.map((item) => {
+              const isActive = item.paths.some((path) => pathname.includes(path));
+              return (
+                <Link key={item.href} href={item.href}>
+                  <Text
+                    size={20}
+                    weight={400}
+                    color={isActive ? "var(--color-main)" : "#4B5563"}
+                  >
+                    {item.label}
+                  </Text>
+                </Link>
+              );
+            })}
           </Flex>
         </nav>
         <Flex align="center" gap={8}>
