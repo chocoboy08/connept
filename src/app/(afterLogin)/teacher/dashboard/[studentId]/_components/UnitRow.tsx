@@ -22,6 +22,15 @@ export default function UnitRow({ unit }: UnitRowProps) {
 
   // 단원의 총합 계산 함수
   const calculateUnitSummary = () => {
+    if (unit.problemSets.length === 0) {
+      return {
+        publishDate: "-",
+        completionRate: 0,
+        totalQuestions: 0,
+        studyTime: "0h 0m",
+      };
+    }
+
     const totalQuestions = unit.problemSets.reduce(
       (sum, set) => sum + set.totalQuestions,
       0
