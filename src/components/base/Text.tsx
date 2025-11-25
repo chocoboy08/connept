@@ -7,6 +7,7 @@ interface TextProps extends PropsWithChildren {
   color?: string;
   height?: CSSProperties["lineHeight"];
   wrap?: CSSProperties["whiteSpace"];
+  center?: boolean;
 }
 
 export default function Text({
@@ -17,6 +18,7 @@ export default function Text({
   color = "#000",
   height,
   wrap = "nowrap",
+  center = false,
 }: TextProps) {
   return (
     <Tag
@@ -27,6 +29,7 @@ export default function Text({
         color: color,
         lineHeight: height,
         whiteSpace: wrap,
+        textAlign: center ? "center" : "start",
       }}
     >
       {children}

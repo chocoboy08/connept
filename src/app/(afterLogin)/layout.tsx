@@ -9,7 +9,7 @@ export default function AfterLoginLayout({
   return (
     <main className="flex flex-col gap-14">
       <Header />
-      {children}
+      <div className="overflow-x-scroll">{children}</div>
     </main>
   );
 }
