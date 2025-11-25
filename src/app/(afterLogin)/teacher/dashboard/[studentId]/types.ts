@@ -5,7 +5,7 @@ export interface ProblemSet {
   publishDate: string;
   completionRate: number;
   totalQuestions: number;
-  studyTime: string;
+  studyTime: number;
 }
 
 // 단원 타입 정의

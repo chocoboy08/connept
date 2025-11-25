@@ -31,15 +31,12 @@ export default function UnitRow({ unit }: UnitRowProps) {
       unit.problemSets.length;
 
     // 학습시간 합산 (h m 형식)
-    let totalMinutes = 0;
+    let totalSec = 0;
     unit.problemSets.forEach((set) => {
-      const [hours, minutes] = set.studyTime.split(" ");
-      totalMinutes +=
-        parseInt(hours.replace("h", "")) * 60 +
-        parseInt(minutes.replace("m", ""));
+      totalSec += set.studyTime;
     });
-    const totalHours = Math.floor(totalMinutes / 60);
-    const remainingMinutes = totalMinutes % 60;
+    const totalHours = Math.floor(totalSec / 3600);
+    const remainingMinutes = Math.floor((totalSec % 3600) / 60);
     const totalStudyTime = `${totalHours}h ${remainingMinutes}m`;
 
     // 출제일은 가장 빠른 날짜
@@ -110,7 +107,7 @@ export default function UnitRow({ unit }: UnitRowProps) {
           {unit.problemSets.map((problemSet) => (
             <tr
               key={problemSet.id}
-              className="border-b border-[#D4D4D4] bg-[gray-50]"
+              className="border-b border-[#D4D4D4] bg-gray-50"
             >
               <td className="pl-6">
                 <Text size={14} color="#797979">
@@ -137,7 +134,9 @@ export default function UnitRow({ unit }: UnitRowProps) {
               </td>
               <td>
                 <Text size={14} color="#797979" center>
-                  {problemSet.studyTime}
+                  {`${Math.floor(problemSet.studyTime / 3600)}h ${Math.floor(
+                    (problemSet.studyTime % 3600) / 60
+                  )}m`}
                 </Text>
               </td>
               <td className="flex justify-center pr-3">

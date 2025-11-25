@@ -6,7 +6,7 @@ interface ProgressBarProps {
 
 export default function ProgressBar({ percent }: ProgressBarProps) {
   const chartColor =
-    percent === 100
+    percent >= 100
       ? "#725AF5"
       : percent < 50
       ? "#FF6161"
